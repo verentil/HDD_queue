@@ -14,5 +14,9 @@ double hdd_fcfs::perform_next_io()
 
 double hdd_fcfs::test_avg_seek( unsigned long long attempt_count )
 {
-    return ::test_avg_seek<> ( *this , attempt_count );
+    avg_controller_que_size = 0;
+    missed_io = 0;
+    double avg_seek = ::test_avg_seek<> ( *this , attempt_count );
+    avg_controller_que_size = avg_controller_que_size / attempt_count;
+    return avg_seek;
 }

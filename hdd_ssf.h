@@ -1,5 +1,5 @@
-#ifndef ACRONIS_HDD_FCFS_H
-#define ACRONIS_HDD_FCFS_H
+#ifndef ACRONIS_HDD_SSF_H
+#define ACRONIS_HDD_SSF_H
 
 #include <iostream>
 #include <map>
@@ -11,19 +11,21 @@ using std::map;
 using std::pair;
 using std::default_random_engine;
 
-class hdd_fcfs: protected hdd_base
+extern const unsigned int hdd_track_count;
+
+class hdd_ssf: protected hdd_base
 {
-    hdd_fcfs(){};                                 // HDD should have a size.
+    hdd_ssf(){};                                 // HDD should have a size.
     map< double, pair< unsigned int, unsigned int > >::iterator
         get_io_task_from_que();
     double perform_next_io();
-    friend double ::perform_next_io<hdd_fcfs> ( hdd_fcfs & );
-    friend double ::test_avg_seek<hdd_fcfs> ( hdd_fcfs & , unsigned long long );
+    friend double ::perform_next_io<hdd_ssf> ( hdd_ssf & );
+    friend double ::test_avg_seek<hdd_ssf> ( hdd_ssf & , unsigned long long );
 public:
-    explicit hdd_fcfs( int hdd_size_in_GB ) : hdd_base( hdd_size_in_GB ) {};
-    ~hdd_fcfs()
+    explicit hdd_ssf( int hdd_size_in_GB ) : hdd_base( hdd_size_in_GB ) {};
+    ~hdd_ssf()
     {
-        std::cout << std::endl << "HDD FCFS" << std::endl;
+        std::cout << std::endl << "HDD SSF" << std::endl;
         std::cout << "missed_io: " << missed_io << std::endl;
         std::cout << "max_controller_que_size: " << max_controller_que_size << std::endl;
         std::cout << "Used track count: " << avg_time_for_track.size() << std::endl;
@@ -32,4 +34,4 @@ public:
     double test_avg_seek( unsigned long long );
 };
 
-#endif // ACRONIS_HDD_FCFS_H
+#endif // ACRONIS_HDD_SSF_H

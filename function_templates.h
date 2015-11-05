@@ -28,6 +28,7 @@ double test_avg_seek( hdd_type & hdd, unsigned long long attempt_count )
             next_io_time += hdd.next_poisson_time_step();
             hdd.add_io_task_to_que( next_io_time );
         }
+        hdd.avg_controller_que_size += hdd.controller_que.size();
         while ( next_io_time > hdd.current_time )
         {
             if ( hdd.controller_que.size() == 0 )

@@ -30,6 +30,7 @@ protected:
     unsigned int current_sector = 1;
     double current_time = 0;
     unsigned long long missed_io = 0;
+    double avg_controller_que_size = 0;
     unsigned int max_controller_que_size = 0;
     map< double, pair< unsigned int, unsigned int > > controller_que;
     unordered_map< unsigned int, pair< double, unsigned long long > > avg_time_for_track;

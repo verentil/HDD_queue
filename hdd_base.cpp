@@ -1,7 +1,7 @@
 #include "hdd_base.h"
 
 const int hdd_base::rpm = 7200;
-const double hdd_base::track_to_track_seek_time = 1.2;                // Read 1 ms. Write 1.2 ms.
+const double hdd_base::track_to_track_seek_time = 1.0;                // Read 1 ms. Write 1.2 ms.
 
 hdd_base::hdd_base( int hdd_size_in_GB )
 {
@@ -13,7 +13,7 @@ hdd_base::hdd_base( int hdd_size_in_GB )
 
 double hdd_base::next_poisson_time_step()
 {
-    double poisson_probability = (double) ( rand() % RAND_MAX + 1 ) / RAND_MAX;
+    double poisson_probability = (double) ( rand() % ( RAND_MAX - 1 ) + 1 ) / RAND_MAX;
     double io_time_step = - log( poisson_probability ) * 1000 / poisson_intension;
     return io_time_step;
 }
@@ -22,8 +22,8 @@ void hdd_base::add_io_task_to_que( double next_io_time )
 {
     if ( controller_que.size() < hdd_controller_que_size )
     {
-        unsigned int next_io_track = random_uint() % ( hdd_track_count + 1 ) - random_uint.min();
-        unsigned int next_io_sector = random_uint() % ( sector_count + 1 );
+        unsigned int next_io_track = random_uint() % hdd_track_count - random_uint.min();
+        unsigned int next_io_sector = random_uint() % sector_count;
         controller_que.insert( pair< double, pair< unsigned int, unsigned int > >
                                 (   next_io_time,
                                     pair< unsigned int, unsigned int >
