@@ -5,6 +5,7 @@
 #include <map>
 
 #include "hdd_base.h"
+#include "function_templates.h"
 
 using std::map;
 using std::pair;
@@ -21,6 +22,8 @@ class hdd_fcfs: protected hdd_base
     map< double, pair< unsigned int, unsigned int > >::iterator
         get_io_task_from_que();
     double perform_next_io();
+    friend double ::perform_next_io<hdd_fcfs> ( hdd_fcfs & );
+    friend double ::test_avg_seek<hdd_fcfs> ( hdd_fcfs & , unsigned long long );
 public:
     explicit hdd_fcfs( int hdd_size_in_GB ) : hdd_base( hdd_size_in_GB ) {};
     ~hdd_fcfs()
