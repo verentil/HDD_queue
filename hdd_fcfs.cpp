@@ -1,7 +1,7 @@
 #include "hdd_fcfs.h"
 
 const int hdd_fcfs::rpm = 7200;
-const double hdd_fcfs::track_to_track_seek_time = 1;                // Read 1 ms. Write 1.2 ms.
+const double hdd_fcfs::track_to_track_seek_time = 1.2;                // Read 1 ms. Write 1.2 ms.
 
 hdd_fcfs::hdd_fcfs( int hdd_size_in_GB )
 {
@@ -13,7 +13,7 @@ hdd_fcfs::hdd_fcfs( int hdd_size_in_GB )
 
 double hdd_fcfs::next_poisson_time_step()
 {
-    double poisson_probability = (double) rand() / RAND_MAX;
+    double poisson_probability = (double) ( rand() % RAND_MAX + 1 ) / RAND_MAX;
     double io_time_step = - log( poisson_probability ) * 1000 / poisson_intension;
     return io_time_step;
 }
@@ -22,8 +22,8 @@ void hdd_fcfs::add_io_task_to_que( double next_io_time )
 {
     if ( controller_que.size() < hdd_controller_que_size )
     {
-        unsigned int next_io_track = rand() % hdd_track_count;
-        unsigned int next_io_sector = rand() % sector_count + 1;
+        unsigned int next_io_track = random_uint() % ( hdd_track_count + 1 ) - random_uint.min();
+        unsigned int next_io_sector = random_uint() % ( sector_count + 1 );
         controller_que.insert( pair< double, pair< unsigned int, unsigned int > >
                                 (   next_io_time,
                                     pair< unsigned int, unsigned int >
@@ -33,7 +33,7 @@ void hdd_fcfs::add_io_task_to_que( double next_io_time )
         if ( controller_que.size() > max_controller_que_size )
             max_controller_que_size = controller_que.size();
     } else {
-        std::cout << "Quit from que size!" << std::endl;
+//        std::cout << "Quit from que size!" << std::endl;
         ++missed_io;
     }
 }
@@ -111,6 +111,7 @@ double hdd_fcfs::test_avg_seek( unsigned long long attempt_count )
         {
             next_io_time += next_poisson_time_step();
             add_io_task_to_que( next_io_time );
+//            std::cout << "next_io_time: " << next_io_time << std::endl;
         }
         while ( next_io_time > current_time )
         {
@@ -123,7 +124,7 @@ double hdd_fcfs::test_avg_seek( unsigned long long attempt_count )
             current_time += elapsed_time;
         }
         --attempt_count;
-        std::cout << "attempt count: " << attempt_count << std::endl;
+//        std::cout << "attempt count: " << attempt_count << std::endl;
     }
     return get_avg_io_seek();
 }

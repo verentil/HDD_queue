@@ -5,9 +5,11 @@
 #include <cstdlib>
 #include <iostream>
 #include <map>
+#include <random>
 
 using std::map;
 using std::pair;
+using std::default_random_engine;
 
 extern const short hdd_controller_que_size;
 extern const unsigned int hdd_track_count;
@@ -28,6 +30,7 @@ class hdd_fcfs
     unsigned int max_controller_que_size = 0;
     map< double, pair< unsigned int, unsigned int > > controller_que;
     map< unsigned int, pair< double, unsigned long long > > avg_time_for_track;
+    default_random_engine random_uint;
 
     hdd_fcfs(){};                                 // HDD should have a size.
     double next_poisson_time_step();
