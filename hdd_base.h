@@ -12,6 +12,7 @@ using std::map;
 using std::unordered_map;
 using std::pair;
 using std::default_random_engine;
+using std::ostream;
 
 extern const short hdd_controller_que_size;
 extern const unsigned int hdd_track_count;
@@ -49,6 +50,19 @@ public:
     explicit hdd_base( int );
     ~hdd_base(){};
     double get_avg_io_seek();
+    unsigned int get_max_controller_que_size()
+    {
+        return  max_controller_que_size;
+    };
+    double get_avg_controller_que_size()
+    {
+        return  avg_controller_que_size;
+    };
+    unsigned long long get_missed_io_count()
+    {
+        return missed_io;
+    };
+    friend ostream & operator << (ostream & , hdd_base & );
 
     virtual double test_avg_seek( unsigned long long ) = 0;
 };

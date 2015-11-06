@@ -11,7 +11,7 @@ using std::map;
 using std::pair;
 using std::default_random_engine;
 
-class hdd_elevator: protected hdd_base
+class hdd_elevator: public hdd_base
 {
     const bool to_center = true;
     bool elevator_direction = to_center;                // Default direction to center, because default track location is track with number 0.

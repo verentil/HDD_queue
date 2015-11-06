@@ -4,19 +4,11 @@ map< double, pair< unsigned int, unsigned int > >::iterator
     hdd_elevator::get_io_task_from_que()
 {
     auto next_io = controller_que.begin();
-//    if ( controller_que.size() == 1 )
-//    {
-//        if ( ( ( elevator_direction == to_center ) && ( next_io->second.first < current_track ) )
-//                || ( ( elevator_direction != to_center ) && ( next_io->second.first > current_track ) ) )
-//            elevator_direction = !elevator_direction;
-//        return next_io;
-//    }
-
     int shortest_path = hdd_track_count;
     bool not_find = true;
     for ( auto candidate = controller_que.begin() ; candidate != controller_que.end() ; ++candidate )
     {
-        if ( abs( candidate->second.first - current_track ) <= shortest_path )
+        if ( abs( candidate->second.first - current_track ) < shortest_path )
         {
             if ( ( elevator_direction == to_center ) && ( candidate->second.first >= current_track ) )
             {

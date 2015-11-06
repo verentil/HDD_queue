@@ -13,7 +13,7 @@ using std::default_random_engine;
 
 extern const unsigned int hdd_track_count;
 
-class hdd_ssf: protected hdd_base
+class hdd_ssf: public hdd_base
 {
     hdd_ssf(){};                                 // HDD should have a size.
     map< double, pair< unsigned int, unsigned int > >::iterator

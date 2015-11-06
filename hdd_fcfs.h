@@ -11,7 +11,7 @@ using std::map;
 using std::pair;
 using std::default_random_engine;
 
-class hdd_fcfs: protected hdd_base
+class hdd_fcfs: public hdd_base
 {
     hdd_fcfs(){};                                 // HDD should have a size.
     map< double, pair< unsigned int, unsigned int > >::iterator

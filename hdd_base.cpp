@@ -13,7 +13,7 @@ hdd_base::hdd_base( int hdd_size_in_GB )
 
 double hdd_base::next_poisson_time_step()
 {
-    double poisson_probability = (double) ( rand() % ( RAND_MAX - 1 ) + 1 ) / RAND_MAX;
+    double poisson_probability = (double) ( rand() % ( RAND_MAX - 2 ) + 1 ) / RAND_MAX;
     double io_time_step = - log( poisson_probability ) * 1000 / poisson_intension;
     return io_time_step;
 }
@@ -77,4 +77,16 @@ double hdd_base::get_avg_io_seek()
     }
     double avg_io_seek = overall_io_time / overall_io_count;
     return avg_io_seek;
+}
+
+ostream & operator << (ostream & os , hdd_base &hdd)
+{
+    for ( auto track : hdd.avg_time_for_track )
+    {
+        os  << track.first << " "
+            << track.second.first << " "
+            << track.second.second << " "
+            << std::endl;
+    }
+    return os;
 }
