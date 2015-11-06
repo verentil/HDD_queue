@@ -17,7 +17,8 @@ using std::ostream;
 extern const short hdd_controller_que_size;
 extern const unsigned int hdd_track_count;
 extern const unsigned int hdd_sector_size_in_byte;
-extern const unsigned int poisson_intension;
+//extern const unsigned int poisson_intension;
+extern unsigned int poisson_intension;
 
 class hdd_base
 {
