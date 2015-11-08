@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2014.6.3)  6 NOV 2015 18:55
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.8)  8 NOV 2015 19:36
 entering extended mode
 **report.tex
 (C:\Users\ALMAZ\Documents\cpp_proj\acronis\report\report.tex
@@ -231,26 +231,68 @@ Package: accents 2006/05/12 v1.3 Math Accent Tools
 \cc@group=\count116
 \cc@skewchar=\count117
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\longtable.sty"
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip46
+\LTright=\skip47
+\LTpre=\skip48
+\LTpost=\skip49
+\LTchunksize=\count118
+\LTcapwidth=\dimen129
+\LT@head=\box30
+\LT@firsthead=\box31
+\LT@foot=\box32
+\LT@lastfoot=\box33
+\LT@cols=\count119
+\LT@rows=\count120
+\c@LT@tables=\count121
+\c@LT@chunks=\count122
+\LT@p@ftn=\toks25
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\fancybox\fancybox.sty"
+Package: fancybox 2010/05/15 1.4
+
+Style option: `fancybox' v1.4 <2010/05/15> (tvz)
+\@fancybox=\box34
+\shadowsize=\dimen130
+\@Sbox=\box35
+\do@VerbBox=\toks26
+\the@fancyput=\toks27
+\this@fancyput=\toks28
+\EndVerbatimTokens=\toks29
+\Verbatim@Outfile=\write3
+\Verbatim@Infile=\read1
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
+\fancy@headwidth=\skip50
+\f@ncyO@elh=\skip51
+\f@ncyO@erh=\skip52
+\f@ncyO@olh=\skip53
+\f@ncyO@orh=\skip54
+\f@ncyO@elf=\skip55
+\f@ncyO@erf=\skip56
+\f@ncyO@olf=\skip57
+\f@ncyO@orf=\skip58
+)
 (C:\Users\ALMAZ\Documents\cpp_proj\acronis\report\report.aux
 LaTeX Font Info:    Try loading font information for T2A+cmr on input line 6.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\cyrillic\t2acmr.fd"
 File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 ))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -286,41 +328,46 @@ LaTeX Font Info:    ... okay on input line 20.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count118
+\c@lstlisting=\count123
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count119
-\scratchdimen=\dimen129
-\scratchbox=\box30
-\nofMPsegments=\count120
-\nofMParguments=\count121
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count122
-\MPscratchDim=\dimen130
-\MPnumerator=\count123
-\makeMPintoPDFobject=\count124
-\everyMPtoPDFconversion=\toks26
+\scratchcounter=\count124
+\scratchdimen=\dimen131
+\scratchbox=\box36
+\nofMPsegments=\count125
+\nofMParguments=\count126
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count127
+\MPscratchDim=\dimen132
+\MPnumerator=\count128
+\makeMPintoPDFobject=\count129
+\everyMPtoPDFconversion=\toks31
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 29.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+Overfull \hbox (21.07433pt too wide) in paragraph at lines 30--31
+\T2A/cmr/m/n/12 щую ра-бо-ту жест-ко-го дис-ка, и оце-нить сред-нее вре-мя, за-
+тра-чи-ва-е-мое на опе-ра-цию []. 
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 34.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 34.
  [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-LaTeX Font Info:    Try loading font information for U+msa on input line 58.
+LaTeX Font Info:    Try loading font information for U+msa on input line 63.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 58.
+LaTeX Font Info:    Try loading font information for U+msb on input line 63.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-Overfull \hbox (2.23528pt too wide) detected at line 60
+Overfull \hbox (2.23528pt too wide) detected at line 65
 \OML/cmm/m/it/12  \OT1/cmr/m/n/12 = 2[]\OML/cmm/m/it/12 ;  []tract[]to[]track 
 \OT1/cmr/m/n/12 = [][]\OML/cmm/m/it/12 ;
  []
@@ -328,33 +375,81 @@ Overfull \hbox (2.23528pt too wide) detected at line 60
 [2] <HDD_classes.pdf, id=18, 613.66766pt x 408.90265pt>
 File: HDD_classes.pdf Graphic file (type pdf)
  <use HDD_classes.pdf>
-[3 <C:/Users/ALMAZ/Documents/cpp_proj/acronis/report/HDD_classes.pdf>] [4]
-(C:\Users\ALMAZ\Documents\cpp_proj\acronis\report\report.aux)
+[3 <C:/Users/ALMAZ/Documents/cpp_proj/acronis/report/HDD_classes.pdf>]
+<img/test_by_intension.jpg, id=32, 563.10374pt x 421.575pt>
+File: img/test_by_intension.jpg Graphic file (type jpg)
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+<use img/test_by_intension.jpg>
 
- ) 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4 <C:/Users/ALMAZ/Documents/cpp_proj/acronis/report/img/test_by_intension.jpg>
+]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5] <img/convergence_2G.jpg, id=39, 529.98pt x 442.65375pt>
+File: img/convergence_2G.jpg Graphic file (type jpg)
+
+<use img/convergence_2G.jpg>
+<img/convergence_10G.jpg, id=40, 563.10374pt x 421.575pt>
+File: img/convergence_10G.jpg Graphic file (type jpg)
+
+<use img/convergence_10G.jpg> [6] [7 <C:/Users/ALMAZ/Documents/cpp_proj/acronis
+/report/img/convergence_2G.jpg> <C:/Users/ALMAZ/Documents/cpp_proj/acronis/repo
+rt/img/convergence_10G.jpg>]
+<img/convergence_200M.jpg, id=48, 563.10374pt x 421.575pt>
+File: img/convergence_200M.jpg Graphic file (type jpg)
+
+<use img/convergence_200M.jpg>
+<img/distribution_10G_5.jpg, id=49, 563.10374pt x 421.575pt>
+File: img/distribution_10G_5.jpg Graphic file (type jpg)
+
+<use img/distribution_10G_5.jpg>
+<img/distribution_10G_6.jpg, id=50, 563.10374pt x 421.575pt>
+File: img/distribution_10G_6.jpg Graphic file (type jpg)
+
+<use img/distribution_10G_6.jpg>
+<img/distribution_10G_7.jpg, id=51, 563.10374pt x 421.575pt>
+File: img/distribution_10G_7.jpg Graphic file (type jpg)
+
+<use img/distribution_10G_7.jpg> [8 <C:/Users/ALMAZ/Documents/cpp_proj/acronis/
+report/img/convergence_200M.jpg>] [9 <C:/Users/ALMAZ/Documents/cpp_proj/acronis
+/report/img/distribution_10G_5.jpg> <C:/Users/ALMAZ/Documents/cpp_proj/acronis/
+report/img/distribution_10G_6.jpg>]
+<img/distribution_10G.jpg, id=58, 563.10374pt x 421.575pt>
+File: img/distribution_10G.jpg Graphic file (type jpg)
+
+<use img/distribution_10G.jpg>
+Overfull \hbox (18.81473pt too wide) in paragraph at lines 390--409
+ [] 
+ []
+
+[10 <C:/Users/ALMAZ/Documents/cpp_proj/acronis/report/img/distribution_10G_7.jp
+g>] [11 <C:/Users/ALMAZ/Documents/cpp_proj/acronis/report/img/distribution_10G.
+jpg>] (C:\Users\ALMAZ\Documents\cpp_proj\acronis\report\report.aux) ) 
 Here is how much of TeX's memory you used:
- 4673 strings out of 494019
- 60539 string characters out of 3146499
- 126198 words of memory out of 3000000
- 7892 multiletter control sequences out of 15000+200000
+ 5121 strings out of 494019
+ 66504 string characters out of 3146498
+ 160415 words of memory out of 3000000
+ 8317 multiletter control sequences out of 15000+200000
  14761 words of font info for 40 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 27i,5n,32p,604b,228s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\ALMAZ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\la
-bx1200.pk> <C:\Users\ALMAZ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\d
-pi600\larm1200.pk> <C:\Users\ALMAZ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\
-lh-t2a\dpi600\labx1440.pk> <C:\Users\ALMAZ\AppData\Local\MiKTeX\2.9\fonts\pk\lj
-four\lh\lh-t2a\dpi600\labx1728.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-r12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on report.pdf (4 pages, 133235 bytes).
+ 27i,9n,43p,727b,268s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users
+\ALMAZ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1200.pk> <
+C:\Users\ALMAZ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx14
+40.pk> <C:\Users\ALMAZ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi60
+0\labx1728.pk> <C:\Users\ALMAZ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t
+2a\dpi600\larm1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on report.pdf (11 pages, 415680 bytes).
 PDF statistics:
- 245 PDF objects out of 1000 (max. 8388607)
+ 280 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
