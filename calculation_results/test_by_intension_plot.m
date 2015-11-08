@@ -1,9 +1,4 @@
 results = load('test_by_intension.bin');
-% plot(results(:,1),results(:,2))
-% hold on;
-% plot(results(:,1),results(:,6))
-% plot(results(:,1),results(:,10))
-% hold off;
 x = results(1:23,1);
 figure
 plot(x,results(1:23,2),'*r',x,results(1:23,6),'.k',x,results(1:23,10),'ob')
