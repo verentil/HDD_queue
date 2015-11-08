@@ -2,9 +2,11 @@
 
 map< double, pair< unsigned int, unsigned int > >::iterator
     hdd_elevator::get_io_task_from_que()
+    // Should return a next queue element at the correct direction
+    // If none are available, change direction and repeat th searching process.
 {
     auto next_io = controller_que.begin();
-    int shortest_path = hdd_track_count;
+    int shortest_path = hdd_track_count;            // maximum possible value + 1
     bool not_find = true;
     for ( auto candidate = controller_que.begin() ; candidate != controller_que.end() ; ++candidate )
     {

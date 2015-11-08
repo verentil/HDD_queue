@@ -3,7 +3,7 @@
 map< double, pair< unsigned int, unsigned int > >::iterator
     hdd_fcfs::get_io_task_from_que()
 {
-    auto next_io = controller_que.begin();
+    auto next_io = controller_que.begin();      // Returns an iterator to the first element that has less IO request coming time (key value).
     return next_io;
 }
 

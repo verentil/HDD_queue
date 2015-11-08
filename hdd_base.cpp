@@ -1,11 +1,11 @@
 #include "hdd_base.h"
 
 const int hdd_base::rpm = 7200;
-const double hdd_base::track_to_track_seek_time = 1.0;                // Read 1 ms. Write 1.2 ms.
+const double hdd_base::track_to_track_seek_time = 1.1;                // Read 1 ms. Write 1.2 ms.
 
-hdd_base::hdd_base( int hdd_size_in_GB )
+hdd_base::hdd_base( double hdd_size_in_GB )
 {
-    sector_count = hdd_size_in_GB * 1e+09                           // 1GB = 1e+09 Bytes.
+    sector_count = ( hdd_size_in_GB * 1e+09 )                           // 1GB = 1e+09 Bytes.
                     / ( hdd_sector_size_in_byte * hdd_track_count );
     one_track_change_time = track_to_track_seek_time * 2 / hdd_track_count ;
     one_rate_time = 6e+04 / rpm;                                    // 1 minute = 6e+04 ms.
@@ -13,8 +13,8 @@ hdd_base::hdd_base( int hdd_size_in_GB )
 
 double hdd_base::next_poisson_time_step()
 {
-    double poisson_probability = (double) ( rand() % ( RAND_MAX - 2 ) + 1 ) / RAND_MAX;
-    double io_time_step = - log( poisson_probability ) * 1000 / poisson_intension;
+    double poisson_probability = (double) ( rand() % ( RAND_MAX - 1 ) + 1 ) / RAND_MAX;
+    double io_time_step = - log( poisson_probability ) * 1000 / poisson_intension;      // 1000ms = 1s: because poisson_intension presented at IOPS format.
     return io_time_step;
 }
 
@@ -22,8 +22,8 @@ void hdd_base::add_io_task_to_que( double next_io_time )
 {
     if ( controller_que.size() < hdd_controller_que_size )
     {
-        unsigned int next_io_track = random_uint() % hdd_track_count - random_uint.min();
-        unsigned int next_io_sector = random_uint() % sector_count;
+        unsigned int next_io_track = random_uint() % hdd_track_count;
+        unsigned int next_io_sector = random_uint() % sector_count + 1;
         controller_que.insert( pair< double, pair< unsigned int, unsigned int > >
                                 (   next_io_time,
                                     pair< unsigned int, unsigned int >
@@ -89,4 +89,14 @@ ostream & operator << (ostream & os , hdd_base &hdd)
             << std::endl;
     }
     return os;
+}
+
+unsigned long long hdd_base::get_overall_io_count()
+{
+    unsigned long long overall_io_count = 0;
+    for ( auto track_time : avg_time_for_track )
+    {
+        overall_io_count += track_time.second.second;
+    }
+    return overall_io_count;
 }

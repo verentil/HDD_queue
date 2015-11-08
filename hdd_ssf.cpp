@@ -4,7 +4,7 @@ map< double, pair< unsigned int, unsigned int > >::iterator
     hdd_ssf::get_io_task_from_que()
 {
     auto next_io = controller_que.begin();
-    int shortest_path = hdd_track_count;
+    int shortest_path = hdd_track_count;        // maximum possible value + 1
     for ( auto candidate = controller_que.begin() ; candidate != controller_que.end() ; ++candidate )
     {
         if ( abs( candidate->second.first - current_track ) < shortest_path )

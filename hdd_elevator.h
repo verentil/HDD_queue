@@ -12,26 +12,25 @@ using std::pair;
 using std::default_random_engine;
 
 class hdd_elevator: public hdd_base
+// This class implements the Elevator algorithm.
 {
     const bool to_center = true;
     bool elevator_direction = to_center;                // Default direction to center, because default track location is track with number 0.
     hdd_elevator(){};                                   // HDD should have a size.
     map< double, pair< unsigned int, unsigned int > >::iterator
         get_io_task_from_que();
+        // Returns an iterator to next IO request at controller queue.
     double perform_next_io();
+    // Wrapping template function
     friend double ::perform_next_io<hdd_elevator> ( hdd_elevator & );
+    // Template function to not overwrite same code. Has direct access to some members. Implementation see at "function_templates.h" file.
     friend double ::test_avg_seek<hdd_elevator> ( hdd_elevator & , unsigned long long );
+    // Template function to not overwrite same code. Has direct access to some members. Implementation see at "function_templates.h" file.
 public:
-    explicit hdd_elevator( int hdd_size_in_GB ) : hdd_base( hdd_size_in_GB ) {};
-    ~hdd_elevator()
-    {
-        std::cout << std::endl << "HDD Elevator" << std::endl;
-        std::cout << "missed_io: " << missed_io << std::endl;
-        std::cout << "max_controller_que_size: " << max_controller_que_size << std::endl;
-        std::cout << "Used track count: " << avg_time_for_track.size() << std::endl;
-        std::cout << "Average controller que size: " << avg_controller_que_size << std::endl;
-    };
+    explicit hdd_elevator( double hdd_size_in_GB ) : hdd_base( hdd_size_in_GB ) {};
+    ~hdd_elevator(){};
     double test_avg_seek( unsigned long long );
+    // Wrapping template function
 };
 
 #endif // ACRONIS_HDD_ELEVATOR_H
